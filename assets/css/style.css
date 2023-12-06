@@ -928,6 +928,10 @@ section {
   background: rgba(0, 0, 0, 0.7);
 }
 
+.services .section-title{
+  position: relative;
+}
+
 .services .section-title h3, .services .section-title p{
   color: #fff;
 }
