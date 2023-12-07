@@ -215,7 +215,6 @@
                   <h3>Whatsapp</h3>
                   <p>Envíanos un WhatsApp</p>
                 </div>
-
               </a>
             </div>
 
@@ -239,28 +238,26 @@
 
           <div class="col-lg-6">
             <form action="https://formsubmit.co/c7c6a13c9878ae4abd5583e25dac00bb" method="POST" role="form" class="php-email-form">
-              <div class="row">
-                <div class="col form-group">
-                  <input type="text" name="Nombre" class="form-control" id="Nombre" placeholder="Tu nombre" required>
+              <fieldset>
+                <legend>Formulario de contacto</legend>
+                <div class="row">
+                  <div class="col form-group">
+                    <input type="text" name="Nombre" class="form-control" id="Nombre" placeholder="Tu nombre" required>
+                  </div>
+                  <div class="col form-group">
+                    <input type="email" class="form-control" name="email" id="Email" placeholder="Tu Email" required>
+                  </div>
                 </div>
-                <div class="col form-group">
-                  <input type="email" class="form-control" name="email" id="Email" placeholder="Tu Email" required>
+                <div class="form-group">
+                  <input type="text" class="form-control" name="Asunto" id="Asunto" placeholder="Asunto" required>
                 </div>
-              </div>
-              <div class="form-group">
-                <input type="text" class="form-control" name="Asunto" id="Asunto" placeholder="Asunto" required>
-              </div>
-              <div class="form-group">
-                <textarea class="form-control" name="Mensaje" rows="5" placeholder="Mensaje" required></textarea>
-              </div>
-              <!-- <div class="my-3">
-                <div class="loading">Cargando...</div>
-                <div class="error-message">No se pudo enviar el mensaje, intente mas tarde</div>
-                <div class="sent-message">Tu mensaje fué enviado ¡Gracias!</div>
-              </div> -->
-              <input type="hidden" name="_template" value="box">
-              <input type="hidden" name="_next" value="https://crismatias.github.io/quicksolutionsIT">
-             <button type="submit">Enviar mensaje</button>
+                <div class="form-group">
+                  <textarea class="form-control" name="Mensaje" rows="5" placeholder="Mensaje" required></textarea>
+                </div>
+                <input type="hidden" name="_template" value="box">
+                <input type="hidden" name="_next" value="https://crismatias.github.io/quicksolutionsIT">
+                <button type="submit">Enviar mensaje</button>
+              </fieldset>
             </form>
           </div>
 
