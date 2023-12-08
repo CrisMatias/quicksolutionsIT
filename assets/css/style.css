@@ -10,8 +10,30 @@
 # General
 --------------------------------------------------------------*/
 body {
+  scroll-behavior: smooth;
   font-family: "Open Sans", sans-serif;
   color: #222222;
+}
+
+body::-webkit-scrollbar {
+  width: 12px;               /* width of the entire scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+  background: #bdbdbd;        /* color of the tracking area */
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #144A8E;    /* color of the scroll thumb */
+  border-radius: 20px;       /* roundness of the scroll thumb */
+}
+
+
+/*Firefox*/
+
+body {
+  scrollbar-width: thin;          /* "auto" or "thin" */
+  scrollbar-color: #144A8E #bdbdbd;   /* scroll thumb and track */
 }
 
 a {
@@ -187,8 +209,8 @@ h6 {
   justify-content: space-between;
   padding: 0 3px;
   font-size: 15px;
-  font-weight: 600;
-  color: #222222;
+  font-weight: 700;
+  color: #000000;
   white-space: nowrap;
   transition: 0.3s;
   position: relative;
@@ -384,7 +406,7 @@ h6 {
   z-index: 99;
   opacity: 1;
   visibility: visible;
-  background: #fff;
+  background: #ffffff;
   box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
 }
 
@@ -449,7 +471,7 @@ h6 {
 }
 
 #hero h2 {
-  color: #333333;
+  color: #222222;
   margin: 5px 0 30px 0;
   font-size: 24px;
   font-weight: 400;
@@ -465,12 +487,13 @@ h6 {
   padding: 10px 28px;
   border-radius: 4px;
   transition: 0.5s;
-  color: #fff;
+  color: #ffffff;
   background: #144A8E;
 }
 
 #hero .btn-get-started:hover {
-  background: #247cf0;
+  background: #ffffff;
+  color: #144A8E;
 }
 
 @media (min-width: 1024px) {
@@ -530,8 +553,8 @@ section {
   font-weight: 700;
   padding: 8px 20px;
   margin: 0;
-  background: #e7f1fd;
-  color: #144A8E;
+  background: #144A8E;
+  color: #eeeeee;
   display: inline-block;
   text-transform: uppercase;
   border-radius: 50px;
@@ -592,8 +615,9 @@ section {
 }
 
 .about .content ul h5 {
+  font-weight: 600;
   font-size: 18px;
-  color: #555555;
+  color: #333333;
 }
 
 .about .content ul p {
@@ -622,7 +646,7 @@ section {
   right: 0;
   top: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0.8);
 }
 
 .services .section-title{
@@ -636,7 +660,6 @@ section {
 .services .icon-box {
   width: 100%;
   text-align: center;
-  border: 1px solid #e2eefd;
   padding: 80px 20px;
   transition: all ease-in-out 0.3s;
   background: rgba(255, 255, 255, 0.6);
@@ -658,7 +681,7 @@ section {
 }
 
 .services .icon-box .icon i {
-  color: #144A8E;
+  color: #0f2442;
   font-size: 28px;
   transition: ease-in-out 0.3s;
 }
@@ -675,24 +698,20 @@ section {
 }
 
 .services .icon-box p {
-  color: #222222;
+  color: #111111;
   line-height: 24px;
   font-size: 14px;
+  font-weight: 500;
   margin-bottom: 0;
-}
-
-.services .icon-box:hover {
-  border-color: #fff;
-  box-shadow: 0px 0 25px 0 rgba(16, 110, 234, 0.1);
 }
 
 .services .icon-box:hover h4,
 .services .icon-box:hover .icon i {
-  color: #153ec7;
+  color: #144A8E;
 }
 
 .services .icon-box:hover .icon {
-  border-color: #153ec7;
+  border-color: #144A8E;
 }
 
 /*--------------------------------------------------------------
@@ -701,8 +720,15 @@ section {
 .contact .info-box {
   color: #222222;
   text-align: center;
-  box-shadow: 0 0 30px rgba(214, 215, 216, 0.3);
+  box-shadow: 0 0 30px rgba(163, 163, 163, 0.3);
+  border: rgba(163, 163, 163, 0.3) 1px solid;
+  transition: 0.5s;
   padding: 20px 0 30px 0;
+}
+
+.contact .info-box:hover{
+  border: rgba(20, 74, 142, 0.5) 1px solid;
+  box-shadow: 0 0 30px rgba(20, 74, 142, 0.5);
 }
 
 .contact .info-box i {
@@ -715,7 +741,7 @@ section {
 
 .contact .info-box h3 {
   font-size: 20px;
-  color: #777777;
+  color: #444444;
   font-weight: 700;
   margin: 10px 0;
 }
@@ -730,6 +756,15 @@ section {
 .contact .php-email-form {
   box-shadow: 0 0 30px rgba(214, 215, 216, 0.4);
   padding: 30px;
+}
+
+.contact .form-legend{
+  font-weight: 600;
+  color: #222222;
+}
+
+.contact .form-control{
+  border: #777777 1px solid;
 }
 
 .contact .php-email-form .error-message {
@@ -747,7 +782,7 @@ section {
 
 .contact .php-email-form .sent-message {
   display: none;
-  color: #fff;
+  color: #ffffff;
   background: #18d26e;
   text-align: center;
   padding: 15px;
@@ -756,7 +791,7 @@ section {
 
 .contact .php-email-form .loading {
   display: none;
-  background: #fff;
+  background: #ffffff;
   text-align: center;
   padding: 15px;
 }
@@ -799,15 +834,18 @@ section {
 
 .contact .php-email-form button[type=submit] {
   background: #144A8E;
-  border: 0;
+  border: #144A8E solid 1px;
   padding: 10px 30px;
   color: #fff;
+  font-weight: 600;
   transition: 0.4s;
   border-radius: 4px;
 }
 
 .contact .php-email-form button[type=submit]:hover {
-  background: #3b8af2;
+  color: #144A8E ;
+  border: #144A8E solid 1px;
+  background: #ffffff;
 }
 
 @keyframes animate-loading {
